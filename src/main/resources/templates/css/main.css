@@ -1,0 +1,257 @@
+*{
+    font-family: "Calibri Light";
+}
+.img-container img {
+    transition: .2s;
+}
+
+#fujiLogo{
+    height: 50px;width: 110px;background: url("./../images/FujiInv.png") no-repeat;background-size: contain;
+}
+
+.img-container img:hover {
+    transform: scale(2);
+    transition: .5s;
+}
+
+.animation-body {
+    text-align: center;
+    color: #555;
+    font-weight: 300;
+    font-size: 32px;
+    padding-bottom: 60px;
+    padding-top: 15px;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    text-shadow: 1px 3px 0 #969696, 1px 13px 5px #aba8a8;
+    font-weight: bold;
+    -webkit-transform: translate3d(0, 0, 0);
+}
+
+.body1 div {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.body1 div:first-of-type {
+    animation: showup 7s infinite;
+}
+
+.body1 div:last-of-type {
+    width: 0px;
+    animation: reveal 7s infinite;
+}
+
+.body1 div:last-of-type span {
+    margin-left: -355px;
+    animation: slidein 7s infinite;
+}
+
+@keyframes showup {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes slidein {
+    0% {
+        margin-left: -800px;
+    }
+    20% {
+        margin-left: -800px;
+    }
+    35% {
+        margin-left: 0px;
+    }
+    100% {
+        margin-left: 0px;
+    }
+}
+
+@keyframes reveal {
+    0% {
+        opacity: 0;
+        width: 0px;
+    }
+    20% {
+        opacity: 1;
+        width: 0px;
+    }
+    30% {
+        width: 355px;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        width: 355px;
+    }
+}
+
+#eye_close, #eye_open {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    top: 0px;
+    left: 0px;
+    opacity: 0;
+    transition: .3s;
+    overflow: hidden;
+}
+
+#eye_close svg, #eye_open svg {
+    height: 100%;
+    width: 100%;
+    color: gray;
+}
+
+#eye_close:hover, #eye_open:hover {
+    opacity: .33;
+    transition: .3s;
+}
+
+.pass_td {
+    transition: .3s;
+}
+
+#eye_open:hover .pass_td {
+    opacity: .33;
+    transition: .3s;
+}
+
+#eye_close:hover .pass_td {
+    opacity: .33;
+    transition: .3s;
+}
+
+.pass-hidden {
+    -webkit-text-security: circle;
+}
+
+.pass_open {
+    -webkit-text-security: none;
+}
+
+.d-none {
+    display: none;
+}
+
+.outer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0px auto;
+    width: 400px;
+}
+
+.inner {
+    height: 50px;
+    width: 50px;
+    outline: 1px solid black;
+    background-color: #00bcd4;
+}
+
+.custom_btn_hover::before {
+    content: "Log out";
+    border-radius: 100px !important;
+    height: 150px;
+    width: 50px;
+    font-size: 2px;
+    font-weight: bold;
+    opacity: .4;
+}
+
+.custom_btn_hover:hover {
+    content: "Logout";
+    opacity: .9;
+    width: fit-content;
+    height: auto;
+    font-size: 10px;
+}
+
+
+.animation h2{
+    position: relative;
+    font-size: 4rem;
+    text-transform: uppercase;
+    color: #171717;
+    -webkit-text-stroke: 1px #313c7d;
+}
+.animation h2::before{
+    position: absolute;
+    content: attr(data-text);
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    color: #cddc39;
+    overflow: hidden;
+    -webkit-text-stroke: 1px #313c7d;
+    animation: animate 6s linear infinite alternate;
+}
+.animation h2::after{
+    position: absolute;
+    content: "";
+    width: 4px;
+    height: 3rem;
+    top: 50%;
+    left: 0;
+    bottom: 0;
+    transform: translate(-50%);
+    background-color: #cddc39;
+    animation: caret 6s linear infinite;
+}
+
+@keyframes animate {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 100%;
+    }
+}
+
+@keyframes caret {
+    0%{
+        left: 0%;
+    }
+    100%{
+        left: 100%;
+    }
+}
+
+.header_text{
+    /*text-shadow: 0 6px 11px 0 rgba(59,113,202,.25), 0 7px 20px 3px rgba(59,113,202,.2);*/
+    text-shadow: 1px 1px 2px rgba(59,113,202,.25), 0 0 1em rgba(59,113,202,.2), 0 0 0.2em rgba(59,113,202,.2);
+    color: white;
+}
+
+.test-shadow{
+    font-size: 25px;
+    font-weight: bold;
+    padding: 30px 150px;
+    background-color: #333333;
+    /*color: green;*/
+    /*text-shadow: 0px 0px 15px #00CE11, 0 0 5px #00CE11, 0px 0px 4px #4CAF50;*/
+        /*//not active!!!*/
+    color: darkred;
+    text-shadow: 0px 0px 15px #ce0000, 0 0 5px #ce0000, 0px 0px 4px #af4c4c;
+}
+
+
+
+
+

@@ -1,0 +1,32 @@
+//TODO 20.04.2023
+
+- To show authenticated user!
+- Add authenticated user in inventory DB
+- to solve the issue with password not match after creation in WEB interface
+
+//TODO 22.04.2023
+
+- To Make the search by plants, fae numbers, sis numbers, itemnames, itemsbrands, items models, seria numners...
+
+//TODO 25.04.2023
+
+ - To create Charts (graph) page
+ - To distribute the graphs by ItemNames
+ - To distribute the graphs by ItemBrands
+ - To distribute the graphs by ItemModels
+ - To distribute the graphs by ItemPlant
+
+//TODO 01.05.2023
+
+ - To Create buttons for uploading files
+ - To Create button for Download the file
+
+//TODO 04.05.2023
+
+- To create uploading Excel buttons and logic
+https://www.tutorialsbuddy.com/import-excel-data-into-mysql-database-in-spring-boot
+
+To add the user in DB :
+
+insert into users (creation_date, department, email, is_active, password, permissions, plant, roles, username)
+			values(now(), "IT", "admin.admin@gmail.com", true, "$2a$12$1PenObmeJNq62aUvGaH.leCKJVpqv1dnXQLWII2WsjJZ9xERAFoZm", "IT", "Chisinau", "ROLE_ADMIN", "admin");

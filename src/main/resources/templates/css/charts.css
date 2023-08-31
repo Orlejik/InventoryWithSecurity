@@ -1,0 +1,13 @@
+#ChisinauChartContainer, #ComratChartContainer, #PlantChiOrCom, #showChisinauChart, #showComratChart{
+    transition: .5s;
+}
+#PlantChiOrCom{
+    padding: 10px 0px;
+    font-family: "Roboto Light";
+    font-weight: bold;
+    font-size: 3em;
+    text-align: center;
+}
+svg{
+    background: transparent;
+}
